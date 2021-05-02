@@ -1,0 +1,274 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.map-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+#map {
+  position: flex;
+  height: 100%;
+  width: 50%;
+  float: right;
+}
+
+/*
+ * We position the sidebar to the right by using float and setting the width
+ * to 100% - the width of the map, in this case 100% - 75% = 25%
+ */
+.sidebar {
+  background: #952925;
+  float: left;
+  height: 100%;
+  padding: 10px;
+  width: 50%;
+}
+
+.sidebar-footer {
+  margin-top: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
+  color: #fff;
+}
+
+h1 {
+  color: #fff;
+  font-family: arial, sans-serif;
+  font-size: 52px;
+  font-weight: bold;
+  margin-top: 5%;
+  text-align: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-bottom: 5%;
+}
+
+h2 {
+  color: #fff;
+  font-family: arial, sans-serif;
+  font-size: 17px;
+  margin-top: 5%;
+  text-align: left;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-bottom: 5%;
+}
+
+h3 {
+  color: #eee;
+  font-family: arial, sans-serif;
+  font-size: 12px;
+  margin-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-bottom: 5%;
+}
+
+h4 {
+  color: #eee;
+  font-family: arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
+h5 {
+  color: #AE614F;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+h6 {
+  color: #000;
+  font-size: 12px;
+}
+
+
+
+/* unvisited link */
+a:link {
+  color: #F5D18E;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: #F5D18E;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: #AE614F;
+}
+
+/* selected link */
+a:active {
+  color: #AE614F;
+}
+
+.checkboxes {
+  color: #fff;
+  background: #000;
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  text-align: right;
+  padding: 15px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  z-index: 20000;
+}
+
+.legend-marker1 {
+  display: inline-block;
+  background: #EDB849;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+}
+
+.legend-marker2 {
+  display: inline-block;
+  background: #952925;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+}
+
+.animated-gradient1 {
+  background: repeating-linear-gradient(
+    to left,
+    #bd0026 0%,
+    #ffffb2 25%,
+    #bd0026 100%
+  );
+  width: 100%;
+  background-size: 200% auto;
+  background-position: 0 100%;
+  animation: gradient 4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.animated-gradient2 {
+  background: repeating-linear-gradient(
+    to left,
+    #00004d 0%,
+    #42ffd9 25%,
+    #00004d 100%
+  );
+  width: 100%;
+  background-size: 200% auto;
+  background-position: 0 100%;
+  animation: gradient 4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.demo {
+  top: 150px;
+  width: 100px;
+  height: 100px;
+  background: grey;
+}
+
+.somethingelse {
+  top: 150px;
+  width: 100px;
+  height: 100px;
+  background: grey;
+}
+
+
+
+
+
+
+.modal-window {
+  position: fixed;
+  background-color: rgba(200, 200, 200, 0.75);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.modal-window:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-window>div {
+  width: 400px;
+  position: relative;
+  margin: 10% auto;
+  padding: 2rem;
+  background: #fff;
+  color: #444;
+}
+
+.modal-window header {
+}
+
+.modal-close {
+  color: #aaa;
+  line-height: 50px;
+  font-size: 80%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 70px;
+  text-decoration: none;
+}
+
+.modal-close:hover {
+  color: #000;
+}
+
+.modal-window h1 {
+  font-size: 150%;
+  margin: 0 0 15px;
+}

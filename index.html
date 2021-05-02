@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      
+      
+    <title>US EJC Incinerators Map</title>
+    <meta name="viewport" content="initial-scale=1.0" />
+    <meta charset="utf-8" />
+
+    <!-- Load Leaflet CSS -->
+    <link
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      rel="stylesheet"
+    />
+
+    <!-- Load our styles -->
+    <link href="./styles.css" rel="stylesheet" />
+
+    <!-- Load Leaflet and Carto libraries -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://libs.cartocdn.com/carto.js/v4.2.0/carto.min.js"></script>
+
+    <!-- Load our JavaScript -->
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <!--
+      We put the map and sidebar in a map-wrapper so they will be positioned
+      and kept together
+    -->
+
+    <div class="map-wrapper">
+      <div id="map"></div>
+
+      <div class="checkboxes">
+        <div>
+
+          <strong>*LEGEND : </strong>&nbsp;<span class="legend-marker1"></span>&nbsp; EJC &nbsp;|   &nbsp;<span class="legend-marker2"></span>&nbsp; Not EJC
+        </div>
+        <div>
+  
+          <br>
+          <div id="somethingelse">
+            <label>
+            <input type="checkbox" class="cancer-checkbox" />&nbsp;Cancer Cases Per 100 Samples 
+            <div class="animated-gradient1"><p><h4>
+              18.7 --- .70</h4></p></div>
+          </label>
+          </div>
+
+          <div id="demo">
+            <label>
+            <input type="checkbox" class="asthma-checkbox" />&nbsp;Asthma Cases Per 100 Samples 
+            <div class="animated-gradient2"><p><h4>
+              
+            19.6 --- 5.6</h4></p></div>
+          </label>
+        </div>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <h1>US EJC Incinerators Map</h1>
+        <h3>
+          <p>
+            Designer:
+            <a href="https://mojarobinson.com" target="_blank">Moja Robinson</a>
+          </p>
+          <p>
+            Partner:
+            <a href="https://www.tishmancenter.org" target="_blank"
+              >Tishman Environment and Design Center</a
+            >
+          </p>
+
+          <p>
+            Client:
+            <a href="https://www.no-burn.org" target="_blank"
+              >Global Alliance for Incineration Alternative</a
+            >
+          </p>
+        </h3>
+
+        <h2>
+          <p>
+            US trash incinerators can damage human and ecological health.
+            Moreover, they hardly make any profits as it's expensive to
+            maintain. These trash burning facilities are strategically placed in
+            underdeveloped areas, where there is less socio-political power to
+            investigate these harmful plants. These areas are considered
+            sacrifice zones or areas that are permanently impaired by heavy
+            environmental alterations or economic disinvestment, often through
+            locally unwanted land use for the greater good of the entire region
+            (e.g., South Bronx and Manhattan). Sacrifice zones are purposely
+            positioned in low-income and communities of color because these
+            communities tend to have less economic and political power to fight
+            the placement of things like waste facilities, highways,
+            petrochemical businesses, and so on.
+          </p>
+          <p>
+            Sacrifice zones have been going on since Emancipation Proclamation
+            but became popular after The National Housing Act of 1934, where
+            redlining was introduced and then justified by the Federal Housing
+            Administration in the 1960s. This sparked the environmental justice
+            movement, led by environmental justice communities (EJC), which are
+            communities most impacted by environmental harms and risks. The same
+            people who live and work in sacrifice zones. This map tells the
+            story of the correlation between EJC health and trash incinerators.
+          </p>
+          <p>
+            Learn more about the story here:
+          </p>
+
+          <p>
+            
+            
+        
+          
+          <a
+              href="#open-modal"
+              >Methodology & Sources</a>
+            
+            <div id="open-modal" class="modal-window">
+  <div>
+    <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
+    <h6>
+
+<p>Methodology: EJ communities were defined by locally enacted legislation, adopted policy, 
+      or proposed law. All of which were focused on racial demographics and income.</p>
+
+<p>A 3-mile buffer was used to determine if the incinerator was in an EJ community.</p>
+      
+          <p>Sources: 
+      
+                   <a href="https://chronicdata.cdc.gov/500-Cities-Places/PLACES-Census-Tract-Data-GIS-Friendly-Format-2020-/yjkw-uj5s" target="_blank">Health Data</a> ; 
+      <a href="https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html" target="_blank">Boundry Data</a>  ; 
+        <a href="http://energyrecoverycouncil.org/wp-content/uploads/2019/10/ERC-2018-directory.pdf" target="_blank">Incinerator Data</a>  ; 
+          <a href="https://echo.epa.gov/air-pollutant-report?fid=110023150604" target="_blank">Incinerator Emissions Data</a>  </p>
+    
+    
+    </h6>
+  </div>
+</div>
+          
+          </p>
+
+          <p>
+            <a
+              href="https://static1.squarespace.com/static/5d14dab43967cc000179f3d2/t/5d5c4bea0d59ad00012d220e/1566329840732/CR_GaiaReportFinal_05.21.pdf"
+              target="_blank"
+              >Full Research Document</a
+            >
+          </p>
+
+          <p>
+            <a
+              href="https://static1.squarespace.com/static/5d14dab43967cc000179f3d2/t/5fc686311972c46e3c8167d1/1606846003793/The+Cost+of+Burning+Trash-+All+5+states.pdf"
+              target="_blank"
+              >State Specific Information</a
+            >
+          </p>
+          
+        </h2>
+        
+        
+
+        <!-- We create a div where the feature data will go when clicked on: -->
+        <div class="sidebar-feature-content"></div>
+        <div>
+          <div class="sidebar-footer"></div>
+        </div>
+      </div>
+
+</div>
+  
+
+  </body>
+</html>
+
