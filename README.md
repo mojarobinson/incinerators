@@ -1,2 +1,3 @@
-# incinerators
-US EJC Incinerators Map
+# carto-sidebar
+
+Adding data to a sidebar with a map made with Carto.js
